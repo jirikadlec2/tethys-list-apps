@@ -22,6 +22,11 @@ class Api(TethysAppBase):
         url_maps = (UrlMap(name='home',
                            url='api',
                            controller='api.controllers.home'),
+                    UrlMap(name='list_apps_help',
+                            url='list_apps_help',
+                            controller='api.controllers.list_apps_help'),
+                    UrlMap(name='list_apps',
+                            url='list_apps',
+                            controller='api.controllers.list_apps'),
         )
-
         return url_maps

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 
 
@@ -10,3 +11,30 @@ def home(request):
     context = {}
 
     return render(request, 'api/home.html', context)
+
+def list_apps_help(request):
+    """
+    Controller for the list_apps_help page.
+    """
+    context = {}
+
+    return render(request, 'api/list_apps.html', context)
+
+def list_apps(request):
+    """
+    Controller for the list_apps page.
+    """
+    return JsonResponse({"apps":[{"name": "Time Series Viewer",
+                         'url': 'http://appsdev.hydroshare.org/apps/timeseries-viewer',
+                         'description': 'View graph and descriptive statistics of one or more time series',
+                         'min_series': 1,
+                         'max_series': 10,
+                         'icon': 'http://appsdev.hydroshare.org/static/timeseries_viewer/images/icon.gif'},
+                        {"name": "Time Series Converter",
+                         'url': 'http://appsdev.hydroshare.org/apps/ts-converter',
+                         'description': 'Convert time series to daily, weekly, monthly, or yearly aggregate',
+                         'min_series': 1,
+                         'max_series': 1,
+                         'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/icon.gif',
+                        }]}
+                        )
