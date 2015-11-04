@@ -29,12 +29,12 @@ def list_apps(request):
                          'description': 'View graph and descriptive statistics of one or more time series',
                          'min_series': 1,
                          'max_series': 10,
-                         'icon': 'http://appsdev.hydroshare.org/static/timeseries_viewer/images/icon.gif'},
+                         'icon': 'http://appsdev.hydroshare.org/static/timeseries_viewer/images/viewer_icon2.gif'},
                         {"name": "Time Series Converter",
                          'url': 'http://appsdev.hydroshare.org/apps/ts-converter',
                          'description': 'Convert time series to daily, weekly, monthly, or yearly aggregate',
                          'min_series': 1,
                          'max_series': 1,
-                         'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/icon.gif',
+                         'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/hydro.gif',
                         }]}
                         )
