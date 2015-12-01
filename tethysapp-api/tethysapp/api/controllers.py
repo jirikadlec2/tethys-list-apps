@@ -38,5 +38,5 @@ def list_apps(request):
             'max_series': 1,
             'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/hydro.gif',
             }
-    resp = [app1, app2]
-    return JsonResponse(resp, safe=False)
+    resp = {[app1, app2]}
+    return JsonResponse(resp)
