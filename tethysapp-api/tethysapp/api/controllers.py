@@ -38,7 +38,7 @@ def list_apps(request):
             'max_series': 1,
             'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/hydro.gif',
             }
-    resp = {[app1, app2]}
+    
     return JsonResponse({"apps":[{"name": "Time Series Viewer",
                          'url': 'http://appsdev.hydroshare.org/apps/timeseries-viewer',
                          'description': 'View graph and descriptive statistics of one or more time series',
