@@ -38,18 +38,12 @@ def list_apps(request):
             'max_series': 1,
             'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/hydro.gif',
             }
-    
+
     return JsonResponse({"apps":[{"name": "Time Series Viewer",
                          'url': 'http://appsdev.hydroshare.org/apps/timeseries-viewer',
-                         'description': 'View graph and descriptive statistics of one or more time series',
+                         'description': 'View graph and descriptive statistics of one time series',
                          'min_series': 1,
                          'max_series': 1,
-                         'icon': 'http://appsdev.hydroshare.org/static/timeseries_viewer/images/viewer_icon2.gif'},
-                        {"name": "Time Series Converter",
-                         'url': 'http://appsdev.hydroshare.org/apps/ts-converter',
-                         'description': 'Convert time series to daily, weekly, monthly, or yearly aggregate',
-                         'min_series': 1,
-                         'max_series': 1,
-                         'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/hydro.gif',
-                        }]}
+                         'icon': 'http://appsdev.hydroshare.org/static/timeseries_viewer/images/viewer_icon2.gif'}
+                        ]}
                         )
