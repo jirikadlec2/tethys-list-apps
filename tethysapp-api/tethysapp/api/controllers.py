@@ -39,11 +39,4 @@ def list_apps(request):
             'icon': 'http://appsdev.hydroshare.org/static/ts_converter/images/hydro.gif',
             }
 
-    return JsonResponse({"apps":[{"name": "Time Series Viewer",
-                         'url': 'http://appsdev.hydroshare.org/apps/timeseries-viewer',
-                         'description': 'View graph and descriptive statistics of one time series',
-                         'min_series': 1,
-                         'max_series': 1,
-                         'icon': 'http://appsdev.hydroshare.org/static/timeseries_viewer/images/viewer_icon2.gif'}
-                        ]}
-                        )
+    return JsonResponse({"apps":[app1]})
